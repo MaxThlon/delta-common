@@ -45,6 +45,7 @@ public class Skin {
      }
    }
   
+  String _name;
   /**
    * Map mapping name, mapping
    */
@@ -55,13 +56,22 @@ public class Skin {
   public Map<String, PanelFile> _panelFiles;
   
   /**
-   * @param mappings
-   * @param panelFiles
+   * @param name .
+   * @param mappings .
+   * @param panelFiles .
    */
-  public Skin(Map<String, Path> mappings,
+  public Skin(String name,
+              Map<String, Path> mappings,
               Map<String, PanelFile> panelFiles) {
+    _name=name;
     _mappings=mappings;
     _panelFiles=panelFiles;
   }
   
+  /**
+   * @return skin name.
+   */
+  public String getName() {
+    return _name;
+  }
 }

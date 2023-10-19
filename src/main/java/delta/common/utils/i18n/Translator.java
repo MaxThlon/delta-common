@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
  */
 public class Translator
 {
-  private static final Logger LOGGER=Logger.getLogger(Translator.class);
+  protected static final Logger LOGGER=Logger.getLogger(Translator.class);
 
   /**
    * Parent translator. Used to forward translation requests if they're not
@@ -31,7 +31,7 @@ public class Translator
   /**
    * Locale.
    */
-  private Locale _locale;
+  protected Locale _locale;
   /**
    * Underlying <tt>ResourceBundle</tt> used to build translated strings.
    */

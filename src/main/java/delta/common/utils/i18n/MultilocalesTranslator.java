@@ -31,9 +31,13 @@ public class MultilocalesTranslator
     _translators=new HashMap<Locale,Translator>();
     for(Locale locale : locales)
     {
-      Translator t=new Translator(baseName,null,locale);
+      Translator t=newTranslator(baseName,null,locale);
       _translators.put(locale,t);
     }
+  }
+
+  protected Translator newTranslator(String baseName, Translator parent, Locale locale) {
+    return new Translator(baseName,null,locale);
   }
 
   /**
